@@ -1,0 +1,206 @@
+@import "vars.scss";
+
+@import "./header/header.scss";
+
+// body {
+//   overflow-x: hidden;
+// }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  gap: 10rem;
+  padding-bottom: 20rem;
+
+  // Ratings section
+
+  .ratings-section {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+
+    .ratings-section__item {
+      // display: flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1.5rem;
+
+      img {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+
+      .stars {
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+      }
+    }
+
+    .ratings-section__item:last-child {
+      img {
+        width: 12.25rem;
+      }
+    }
+  }
+
+  //Recruiting section
+
+  .recruiting-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 21rem;
+    position: relative;
+
+    #middle-left-vectors {
+      position: absolute;
+      left: -3%;
+      top: -2%;
+      transform: scale(0.9);
+    }
+
+    .recruiting-text {
+      @include text-parent;
+      width: 33rem;
+    }
+
+    .recruiting-text__title {
+      @include section-title;
+    }
+
+    .recruiting-text__description {
+      @include section-description;
+    }
+
+    .recruiting-list {
+      @include section-list;
+    }
+
+    .recruiting-list__item {
+      @include section-list__item;
+
+      &::before {
+        content: "•";
+        color: $bullet-blue;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        // padding: 1rem;
+      }
+    }
+
+    .recruiting-button {
+      @include section-button;
+    }
+  }
+
+  //Hiring section
+
+  .hiring-section {
+    display: flex;
+    position: relative;
+
+    .hiring-image__container {
+      padding-left: 2rem;
+    }
+
+    .hiring-text {
+      @include text-parent;
+      margin-right: 20rem;
+      margin-left: 8rem;
+
+      .hiring-text__title {
+        @include section-title;
+      }
+
+      .hiring-text__description {
+        @include section-description;
+      }
+
+      .hiring-list {
+        @include section-list;
+      }
+
+      .hiring-list__item {
+        @include section-list__item;
+        &::before {
+          content: "•";
+          color: $bullet-blue;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+          // padding: 1rem;
+        }
+      }
+
+      .hiring-button {
+        @include section-button;
+      }
+    }
+
+    svg {
+      position: absolute;
+      right: 0;
+      bottom: -13rem;
+    }
+  }
+
+  //Ipsum section
+
+  .ipsum-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+
+    .ipsum-title {
+      @include section-title;
+    }
+
+    .ipsum-description {
+      @include section-description;
+      padding: 0 25rem;
+    }
+
+    .ipsum-list {
+      display: flex;
+      padding: 0 10rem;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        border: 1px solid #cfcecf;
+        max-width: 23rem;
+        padding: 3rem 3rem 5rem 3rem;
+        min-height: 20rem;
+
+        p {
+          color: $text-black;
+          font-family: $main-font;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 1.75rem;
+        }
+      }
+      li:nth-child(2) {
+        svg {
+          border: 1px solid #ccc;
+          border-radius: 0.5rem;
+          padding: 0.75rem;
+        }
+      }
+      li:nth-child(3) {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}

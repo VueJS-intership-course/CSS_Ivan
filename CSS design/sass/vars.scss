@@ -1,0 +1,64 @@
+$background-blue: #381df6;
+$bullet-blue: #371cf5;
+
+$text-white: #fff;
+$text-black: #0d0a10;
+
+$main-font: "Montserrat", "sans-serif";
+
+@mixin text-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@mixin section-title {
+  color: $text-black;
+  font-family: $main-font;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 112.5%;
+}
+
+@mixin section-description {
+  color: $text-black;
+  font-family: $main-font;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+@mixin section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@mixin section-list__item {
+  color: $text-black;
+  font-family: $main-font;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+@mixin section-button {
+  padding: 0.75rem 2rem;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  background: $background-blue;
+  color: #fff;
+  text-align: center;
+  font-family: "Montserrat", "sans-serif";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  border: none;
+  max-width: 9.25rem;
+  cursor: pointer;
+}
